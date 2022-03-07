@@ -8,6 +8,7 @@ function findMinNum(arr, dep, n) {
   // platform needed
   var res = 1;
   for (var i = 0; i < n; i++) {
+    platForm = 1;
     for (var j = i + 1; j < n; j++) {
       if (
         (arr[i] >= arr[j] && arr[i] <= dep[j]) ||
@@ -17,11 +18,11 @@ function findMinNum(arr, dep, n) {
       }
     }
 
+    console.log("res:", res, "platForm:", platForm);
+
     if (res == platForm) {
-      res = res;
     } else {
       if (res > platForm) {
-        res = res;
       } else {
         res = platForm;
       }
